@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>home</title>
+</head>
+<body>
+  <div class="page-header">
+    <h1>Welcome to the Hail Stony!<small>this web is created by Captain America</small></h1>
+    <a href="/login"><span>login</span></a>
+    <span>||</span>
+    <a href="/register"><span>register</span></a></br>
+  </div>
+  <div id = "blogform">
+    <form action "" method="POST">
+      {% csrf_token %}
+      title<input type="title" name="title"></br>
+      content<input type="content" name = "content"></br>
+      <input type="submit" value = "submit">
+    </form>
+  </div>
+  <div id = "bloglist">
+    <ul>
+      {% for each in bloglist %}
+         <ul class="list-group">
+          <li class="list-group-item">
+            <ul>
+              <ul>title:{{ each.title }}</ul>
+              <ul>content:{{ each.content }}</ul>
+              <div>———————————————————————————————————————</div>
+            </ul>
+          </li>
+        </ul>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>

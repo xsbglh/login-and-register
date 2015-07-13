@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>login</title>
+</head>
+<body>
+  <div class="page-header">
+    <h1>Logining</h1>
+  </div>
+  <div id = "login">
+    <form action "" method="POST">
+      {% csrf_token %}
+      username<input type="text" name="username"></br>
+      password<input type="text" name = "password"></br>
+      <input type="submit" value = "login">
+    </form>
+  </div>
+</body>
+</html>
